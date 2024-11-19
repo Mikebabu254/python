@@ -1,18 +1,14 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Function to calculate the remark based on score
 def calculate_remark():
     try:
-        # Get input values
         name = name_entry.get().strip()
         course = course_entry.get().strip()
         score = score_entry.get().strip()
 
-        # Debug prints
         print(f"Inputs - Name: {name}, Course: {course}, Score: {score}")
 
-        # Validate inputs
         if not name or not course:
             messagebox.showerror("Input Error", "Please enter all fields.")
             return
@@ -37,10 +33,8 @@ def calculate_remark():
         else:
             remark = "Invalid Score"
 
-        
         print(f"Remark: {remark}")
 
-        
         result_label.config(
             text=f"Student: {name}\nCourse: {course}\nScore: {score}\nRemark: {remark}",
             fg="green",
